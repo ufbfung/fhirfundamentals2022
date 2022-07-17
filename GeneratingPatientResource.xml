@@ -1,8 +1,3 @@
-<GeneratingPatientResource
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema"
-    xsi:noNamespaceSchemaLocation="patient.xsd">
-  <bar />
-</GeneratingPatientResource>
 <Patient xmlns="http://hl7.org/fhir">
    <id value="6843961"/>
    <meta>
