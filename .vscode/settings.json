@@ -1,6 +1,3 @@
 {
-    "xml.downloadExternalResources.enabled": true,
-    "xml.catalogs": [
-        "catalog.xml"
-    ]
+    "xml.downloadExternalResources.enabled": true
 }
