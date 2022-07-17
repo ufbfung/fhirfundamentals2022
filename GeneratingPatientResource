@@ -1,0 +1,24 @@
+<Patient xmlns="http://hl7.org/fhir">
+   <id value="6843961"/>
+   <meta>
+      <versionId value="1"/>
+      <lastUpdated value="2022-07-17T18:27:42.626+00:00"/>
+      <source value="#kF8pSMEI4M9VxclO"/>
+   </meta>
+   <text>
+      <status value="generated"/>
+      <div xmlns="http://www.w3.org/1999/xhtml">Brian Fung</div>
+   </text>
+   <identifier>
+      <system value="http://clinfhir.com/fhir/NamingSystem/identifier"/>
+      <value value="brian.fung"/>
+   </identifier>
+   <name>
+      <use value="official"/>
+      <text value="Brian Fung"/>
+      <family value="Fung"/>
+      <given value="Brian"/>
+   </name>
+   <gender value="male"/>
+   <birthDate value="1987-07-17"/>
+</Patient>
