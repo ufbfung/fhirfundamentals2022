@@ -2,5 +2,11 @@
     "xml.downloadExternalResources.enabled": true,
     "xml.catalogs": [
         "catalog.xml"
+    ],
+    "xml.fileAssociations": [
+        {
+            "pattern": "GeneratingPatientResource.xml",
+            "systemId": "patient.xsd"
+        }
     ]
 }
