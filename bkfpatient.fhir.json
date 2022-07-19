@@ -1,5 +1,6 @@
 {
-    "resourceType": "Patient",
+  "$schema": "https://raw.githubusercontent.com/ufbfung/fhirfundamentals2022/main/fhir.schema.json",  
+  "resourceType": "Patient",
     "id": "6843961",
     "meta": {
       "versionId": "1",
@@ -47,7 +48,7 @@
         "city": "Ann Harbor",
         "state": "MI",
         "postalCode": "48104",
-        "Country": "US"
+        "country": "US"
       }
-    ]    
+    ]  
   }
