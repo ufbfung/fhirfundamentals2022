@@ -1,12 +1,4 @@
 {
-    "json.schemas":[
-        {
-            "filematch": [
-                "/*.fhir.json"
-            ],
-            "url":"./fhir.schema.json"
-        }
-    ],
     "resourceType": "Patient",
     "id": "6843961",
     "meta": {
@@ -35,5 +27,27 @@
       }
     ],
     "gender": "male",
-    "birthDate": "1987-07-17"
+    "telecom": [
+      {
+        "system": "phone",
+        "value": "(03) 5555 6789",
+        "use":"home"
+
+      }
+    ],
+    "birthDate": "1987-07-17",
+    "address":[
+      {
+        "use":"home",
+        "type":"both",
+        "text":"3300 Washtenaw, Ann Habor",
+        "line": [
+          "3300 Washtenaw"
+        ],
+        "city": "Ann Harbor",
+        "state": "MI",
+        "postalCode": "48104",
+        "Country": "US"
+      }
+    ]
   }
