@@ -1,0 +1,52 @@
+{
+    "resourceType": "Patient",
+    "id": "2476",
+    "meta": {
+        "versionId": "1",
+        "lastUpdated": "2022-08-01T12:46:09.459+00:00",
+        "source": "#kF8pSMEI4M9VxclO"
+    },
+    "text": {
+        "status": "generated",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Brian Fung</div>"
+    },
+    "identifier": [
+        {
+            "system": "http://clinfhir.com/fhir/NamingSystem/identifier",
+            "value": "brian.fung"
+        }
+    ],
+    "name": [
+        {
+            "use": "official",
+            "text": "Brian Fung",
+            "family": "Fung",
+            "given": [
+                "Brian"
+            ]
+        }
+    ],
+    "telecom": [
+        {
+            "system": "phone",
+            "value": "(03) 5555 6789",
+            "use": "home"
+        }
+    ],
+    "gender": "male",
+    "birthDate": "1987-07-17",
+    "address": [
+        {
+            "use": "home",
+            "type": "both",
+            "text": "3300 Washtenaw, Ann Habor",
+            "line": [
+                "3300 Washtenaw"
+            ],
+            "city": "Ann Harbor",
+            "state": "MI",
+            "postalCode": "48104",
+            "country": "US"
+        }
+    ]
+}
