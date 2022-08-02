@@ -1,3 +1,11 @@
 {
-    "xml.downloadExternalResources.enabled": true
+    "xml.downloadExternalResources.enabled": true,
+    "json.schemas": [
+        {
+            "fileMatch": [
+                "/*.fhir.json"
+            ],
+            "url": "https://raw.githubusercontent.com/ufbfung/fhirfundamentals2022/main/Schemas/fhir.schema.json"
+        }
+        ]
 }
