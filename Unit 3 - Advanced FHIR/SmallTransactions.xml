@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bundle>
+    <type value="transaction"> </type>
+    <entry>
+        <resource>
+            <Organization>
+                <text>
+                    <status value="generated"/>
+                    <div xmlns="http://www.w3.org/1999/xhtml"> LITTLE CLINIC 2000 PATIENT DRIVE ANN
+                        ARBOR MI US - NOI # 456789 </div>
+                </text>
+                <identifier>
+                    <system value="www.nationalorgidentifier.gov"/>
+                    <value value="456789"/>
+
+                </identifier>
+                <name value="LITTLE CLINIC"/>
+                <address>
+                    <line value="2000 CLINIC DRIVE"/>
+                    <city value="ANN ARBOR"/>
+                    <state value="MI"/>
+                    <country value="US"/>
+              </address>
+            </Organization>
+        </resource>
+        <request>
+            <method value="POST"/>
+            <url value="Organization"/>
+        </request>
+    </entry>
+    <entry>
+        <resource>
+            <Patient>
+                <text>
+                    <status value="generated"/>
+                    <div xmlns="http://www.w3.org/1999/xhtml"> EVERYWOMAN EVE 2000 PATIENT DRIVE ANN
+                        ARBOR MI MPI #123456 </div>
+
+                </text>
+                <identifier>
+                    <system value="www.mypatientidentifier.com"/>
+                    <value value="123456"/>
+                </identifier>
+                <name>
+                    <family value="EVERYWOMAN"/>
+                    <given value="EVE"/>
+                </name>
+                <address>
+                    <line value="2000 PATIENT DRIVE"/>
+                    <city value="ANN ARBOR"/>
+                    <state value="MI"/>
+                    <country value="US"/>
+                </address>
+            </Patient>
+
+        </resource>
+        <request>
+            <method value="POST"/>
+            <url value="Patient"/>
+        </request>
+    </entry>
+</Bundle>
