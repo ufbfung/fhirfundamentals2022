@@ -1,4 +1,5 @@
 {
+    "$schema": "https://raw.githubusercontent.com/ufbfung/fhirfundamentals2022/main/fhir.schema.json",
     "resourceType": "Patient",
     "id": "2476",
     "meta": {
@@ -22,7 +23,7 @@
             "text": "Brian Fung",
             "family": "Fung",
             "given": [
-                "Brian"
+                "Brian on fhir"
             ]
         }
     ],
