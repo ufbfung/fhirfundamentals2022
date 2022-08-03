@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bundle xmlns="http://hl7.org/fhir">
+    <id value="a4b0eb3c-a3f3-4739-aef3-db9f718a0b15"></id>
+    <type value="message"> </type>
+    <entry>
+        <resource>
+            <MessageHeader>
+                <id value="21448097-009c-4eec-b8d3-6aba818b3a74"></id>
+                <timestamp value="2012-01-04T09:10:14Z"></timestamp>
+                <event>
+                    <code value="admin-notify"></code>
+                </event>
+                <source>
+                    <name>SENDING SYSTEM</name>
+                    <endpoint value="www.sendingsystem.com"></endpoint>
+                </source>
+                <destination>
+                    <name>RECEIVING SYSTEM</name>
+                    <endpoint value="www.receivingsystem.com"></endpoint>
+                </destination>
+                <data>
+                    <reference value="urn:uuid:3a78d9c4-5d87-4264-b3b4-f4d0506a373c"></reference>
+                </data>
+            </MessageHeader>
+        </resource>
+    </entry>
+    <entry>
+        <fullUrl value="urn:uuid:3a78d9c4-5d87-4264-b3b4-f4d0506a373c"></fullUrl>
+        <resource>
+            <Patient>
+                <id value="MPI.123456"/>
+                <text>
+                    <status value="generated"/>
+                    <div xmlns="http://www.w3.org/1999/xhtml"> EVERYWOMAN EVE 2000 PATIENT DRIVE ANN
+                        ARBOR MI MPI #123456 </div>
+
+                </text>
+                <name>
+                    <family value="EVERYWOMAN"/>
+                    <given value="EVE"/>
+                </name>
+                <address>
+                    <line value="2000 PATIENT DRIVE"/>
+                    <city value="ANN ARBOR"/>
+                    <state value="MI"/>
+                    <country value="US"/>
+                </address>
+                <managingOrganization>
+                    <reference value="www.http://fhir2.healthintersections.com.au/open/Organization/10">
+                        
+                    </reference>   
+                </managingOrganization>
+               </Patient>
+
+        </resource>
+        <request>
+            <method value="PUT"/>
+            <url value="Patient"/>
+        </request>
+    </entry>
+</Bundle>
