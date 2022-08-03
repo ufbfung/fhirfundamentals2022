@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bundle xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://hl7.org/fhir ../../MAIS/REUNION_9/fhir-all-xsd/bundle.xsd"
+    xmlns="http://hl7.org/fhir">
+    <id value="a4b0eb3c-a3f3-4739-aef3-db9f718a0b15"/>
+    <type value="document"> </type>
+    <entry>
+        <resource>
+            <Composition xmlns="http://hl7.org/fhir">
+                <id value="FhirFundamentalsTest"/>
+                <text>
+                    <status value="generated"/>
+                    <div xmlns="http://www.w3.org/1999/xhtml">
+                        <p>Consultation note for Henry Levin the 7th</p>
+                        <p>Managed by Good Health Clinic</p>
+                    </div>
+                </text>
+                <identifier>
+                    <system value="http://healthintersections.com.au/test"/>
+                    <value value="FhirFundamentalsTest"/>
+                </identifier>
+                <date value="2015-01-04T09:10:14Z"/>
+                <type>
+                    <coding>
+                        <system value="http://loinc.org"/>
+                        <code value="11488-4"/>
+                        <display value="Consult note"/>
+                    </coding>
+                </type>
+                <title value="Consultation Note"/>
+                <status value="final"/>
+                <subject>
+                    <reference value="Patient/EveEverywoman"/>
+                    <display value="Eve Everywoman"/>
+                </subject>
+                <author>
+                    <reference value="Practitioner/JamesCagney"/>
+                    <display value="James Cagney, MD"/>
+                </author>
+                <attester>
+                    <mode value="legal"/>
+                    <time value="2015-01-04T09:10:14Z"/>
+                    <party>
+                        <reference value="Practitioner/JamesCagney"/>
+                        <display value="James Cagney, MD"/>
+                    </party>
+                </attester>
+                <custodian>
+                    <reference value="Organization/LittleClinic"/>
+                    <display value="Little Clinic"/>
+                </custodian>
+                <event>
+                    <code>
+                        <coding>
+                            <system value="http://hl7.org/fhir/v3/ActCode"/>
+                            <code value="HEALTHREC"/>
+                            <display value="health record"/>
+                        </coding>
+                    </code>
+                    <period>
+                        <start value="2015-07-18"/>
+                        <end value="2018-11-12"/>
+                    </period>
+                    <detail>
+                        <display value="See sections"></display>
+                    </detail>
+                </event>
+                <encounter>
+                    <reference value="Encounter/SmallClinicEncounter128"/>
+                </encounter>
+                <section>
+                    <title value="History of present illness"/>
+                    <code>
+                        <coding>
+                            <system value="http://loinc.org"/>
+                            <code value="11348-0"/>
+                            <display value="History of past illness Narrative"/>
+                        </coding>
+                    </code>
+                    <text>
+                        <status value="generated"/>
+                        <div xmlns="http://www.w3.org/1999/xhtml">
+                            <p> A 52 y.o. woman presented to the ER with gum bleeding and widespread
+                                petechiae </p>
+                        </div>
+                    </text>
+                    <entry>
+                        <reference value="Condition/GumBleeding"/>
+                    </entry>
+                    <entry>
+                        <reference value="Condition/Petechiae"/>
+                    </entry>
+                    
+                </section>
+
+            </Composition>
+        </resource>
+    </entry>
+    <entry>
+        <fullUrl value="urn:uuid:3a78d9c4-5d87-4264-b3b4-f4d0506a373c"/>
+        <resource>
+            <Patient>
+                <id value="EveEverywoman"/>
+                <text>
+                    <status value="generated"/>
+                    <div xmlns="http://www.w3.org/1999/xhtml"> EVERYWOMAN EVE 2000 PATIENT DRIVE ANN
+                        ARBOR MI MPI #777333111 </div>
+
+                </text>
+                <name>
+                    <family value="EVERYWOMAN"/>
+                    <given value="EVE"/>
+                </name>
+                <address>
+                    <line value="2000 PATIENT DRIVE"/>
+                    <city value="ANN ARBOR"/>
+                    <state value="MI"/>
+                    <country value="US"/>
+                </address>
+                <managingOrganization>
+                    <reference
+                        value="http://fhir2.healthintersections.com.au/open/Organization/LittleClinic"
+                    > </reference>
+                </managingOrganization>
+            </Patient>
+
+        </resource>
+
+    </entry>
+    <entry>
+        <resource>
+            <Organization>
+                <id value="LittleClinic"/>
+                <text>
+                    <status value="generated"/>
+                    <div xmlns="http://www.w3.org/1999/xhtml"> LITTLE CLINIC 2000 PATIENT DRIVE ANN
+                        ARBOR MI US - NOI # 888333111 </div>
+                </text>
+                <name value="LITTLE CLINIC"/>
+                <address>
+                    <line value="2000 CLINIC DRIVE"/>
+                    <city value="ANN ARBOR"/>
+                    <state value="MI"/>
+                    <country value="US"/>
+              </address>
+            </Organization>
+        </resource>
+    </entry>
+    <entry>
+        <resource>
+            <Practitioner>
+                <id value="JamesCagney"/>
+                <text>
+                    <status value="generated"/>
+                    <div xmlns="http://www.w3.org/1999/xhtml"> LITTLE CLINIC 2000 PATIENT DRIVE ANN
+                        ARBOR MI US - NOI # 888333111 </div>
+                </text>
+                <name>
+
+                    <family value="James"/>
+                    <given value="Cagney"/>
+                    <suffix value="MD"/>
+                </name>
+                <address>
+                    <line value="2000 CLINIC DRIVE"/>
+                    <city value="ANN ARBOR"/>
+                    <state value="MI"/>
+                    <country value="US"/>
+              </address>
+            </Practitioner>
+        </resource>
+    </entry>
+    <entry>
+        <resource>
+            <Encounter>
+                <id value="SmallClinicEncounter128"/>
+                <text>
+                    <status/>
+                    <div xmlns="http://www.w3.org/1999/xhtml"/>
+                </text>
+
+                <status value="finished"/>
+                <class value="ambulatory"/>
+                <patient>
+                    <reference
+                        value="http://fhir2.healthintersections.com.au/open/Patient/EveEverywoman"/>
+                </patient>
+                <serviceProvider>
+                    <reference
+                        value="http://fhir2.healthintersections.com.au/open/Organization/LittleClinic"
+                    > </reference>
+                </serviceProvider>
+            </Encounter>
+        </resource>
+    </entry>
+    <entry>
+        <resource>
+            <Condition>
+                <id value="GumBleeding"/>
+                <text>
+                    <status value="generated"/>
+                    <div xmlns="http://www.w3.org/1999/xhtml"> Gum Bleeding </div>
+                </text>
+                <patient>
+                    <reference
+                        value="http://fhir2.healthintersections.com.au/open/Patient/EveEverywoman"/>
+
+                </patient>
+                <code>
+                    <coding>
+                        <system value="http://snomed.info/sct"/>
+                        <code value="163164001"/>
+                        <display value="On examination - bleeding gums (finding) "/>
+                    </coding>
+                </code>
+                <verificationStatus value="confirmed"/>
+            </Condition>
+        </resource>
+
+    </entry>
+    <entry>
+        <resource>
+            <Condition>
+                <id value="Petechiae"/>
+                <text>
+                    <status value="generated"/>
+                    <div xmlns="http://www.w3.org/1999/xhtml">Petechiae</div>
+                </text>
+                <patient>
+                    <reference
+                        value="http://fhir2.healthintersections.com.au/open/Patient/EveEverywoman"/>
+
+                </patient>
+                <code>
+                    <coding>
+                        <system value="http://snomed.info/sct"/>
+                        <code value="274309006"/>
+                        <display value="On examination - petechiae present (finding)"> </display>
+                    </coding>
+                </code>
+                <verificationStatus value="confirmed"/>
+            </Condition>
+        </resource>
+
+    </entry>
+</Bundle>
