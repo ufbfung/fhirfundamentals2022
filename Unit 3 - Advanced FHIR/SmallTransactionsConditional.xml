@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bundle xmlns="http://hl7.org/fhir">
+    <type value="transaction"> </type>
+    <entry>
+        <resource>
+            <Organization>
+                <id value="17C7D86E-664F-4FE2-91D7-AF9A8E47311E"></id>
+                <text>
+                    <status value="generated"/>
+                    <div xmlns="http://www.w3.org/1999/xhtml"> LITTLE CLINIC 2000 PATIENT DRIVE ANN
+                        ARBOR MI US - NOI # 888333111 </div>
+                </text>
+                <identifier>
+                    <system value="www.nationalorgidentifier.gov"/>
+                    <value value="888333111"/>
+
+                </identifier>
+                <name value="LITTLE CLINIC"/>
+                <address>
+                    <line value="2000 CLINIC DRIVE"/>
+                    <city value="ANN ARBOR"/>
+                    <state value="MI"/>
+                    <country value="US"/>
+              </address>
+            </Organization>
+        </resource>
+        <request>
+            <method value="PUT"/>
+            <url value="Organization?identifier=www.nationalorgidentifier.gov|888333111"/>
+        </request>
+    </entry>
+    <entry>
+        <resource>
+            <Patient>
+                <text>
+                    <status value="generated"/>
+                    <div xmlns="http://www.w3.org/1999/xhtml"> EVERYWOMAN EVE 2000 PATIENT DRIVE ANN
+                        ARBOR MI MPI #12312311 </div>
+
+                </text>
+                <identifier>
+                    <system value="www.mypatientidentifier.com"/>
+                    <value value="12312311"/>
+                </identifier>
+                <name>
+                    <family value="EVERYWOMAN"/>
+                    <given value="EVE"/>
+                </name>
+                <address>
+                    <line value="2000 PATIENT DRIVE"/>
+                    <city value="ANN ARBOR"/>
+                    <state value="MI"/>
+                    <country value="US"/>
+                </address>
+                <managingOrganization>
+                    <reference value="Organization/17C7D86E-664F-4FE2-91D7-AF9A8E47311E">
+                        
+                    </reference>   
+                </managingOrganization>
+               </Patient>
+
+        </resource>
+        <request>
+            <method value="PUT"/>
+            <url value="Patient?identifier=www.mypatientidentifier.com|12312311"/>
+        </request>
+    </entry>
+</Bundle>
