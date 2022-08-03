@@ -1,0 +1,280 @@
+{
+	"resourceType": "Bundle",
+	"type": "transaction",
+	"entry": [
+		{
+			"fullUrl": "urn:uuid:17C7D86E-664F-4FE2-91D7-AF9A8E47311E",
+			"resource": {
+				"resourceType": "Organization",
+				"text": {
+					"status": "generated",
+					"div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"> UWEARME - A DIVISION OF HEALTH GIZMOS                        CORP </div>"
+				},
+				"identifier": [
+					{
+						"system": "http://fhirfun2021.org/ids",
+						"value": "UWEARME"
+					}
+				],
+				"name": "UWEARME",
+				"address": [
+					{
+						"line": [
+							"2000 WEARABLE DRIVE"
+						],
+						"city": "ANN ARBOR",
+						"state": "MI",
+						"country": "US"
+					}
+				]
+			},
+			"request": {
+				"method": "PUT",
+				"url": "Organization?identifier=http://fhirfun2021.org/ids|UWEARME"
+			}
+		},
+		{
+			"fullUrl": "urn:uuid:0fc374a1-a226-4552-9683-55dd510e67c9",
+			"resource": {
+				"resourceType": "Patient",
+				"text": {
+					"status": "generated",
+					"div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"> [YOUR NAME] Id # [YOUR_PATIENT_IDENTIFIER] </div>"
+				},
+				"identifier": [
+					{
+						"system": "http://mypatientidentifier.com/ids",
+						"value": "[YOUR_PATIENT_IDENTIFIER]"
+					}
+				],
+				"name": [
+					{
+						"family": "[YOUR LAST]",
+						"given": [
+							"[YOUR FIRST]"
+						]
+					}
+				],
+				"address": [
+					{
+						"line": [
+							"[YOUR ADDRESS]"
+						],
+						"city": "[YOUR CITY]",
+						"state": "[YOUR STATE]",
+						"country": "[YOUR COUNTRY]"
+					}
+				],
+				"managingOrganization": {
+					"reference": "urn:uuid:17C7D86E-664F-4FE2-91D7-AF9A8E47311E"
+				}
+			},
+			"request": {
+				"method": "PUT",
+				"url": "Patient?identifier=http://mypatientidentifier.com/ids|[YOUR_PATIENT_IDENTIFIER]"
+			}
+		},
+		{
+			"fullUrl": "urn:uuid:b405c692-54ea-4d0d-afb1-8f91880a3f24",
+			"resource": {
+				"resourceType": "Device",
+				"text": {
+					"status": "generated",
+					"div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"> UW Device [YOUR_PATIENT_IDENTIFIER]                    </div>"
+				},
+				"identifier": [
+					{
+						"system": "http://uwearme.com/dev",
+						"value": "[YOUR_PATIENT_IDENTIFIER]"
+					}
+				],
+				"expirationDate": "2020-10-10",
+				"lotNumber": "22222",
+				"modelNumber": "u888800-1",
+				"type": {
+					"coding": [
+						{
+							"system": "http://snomed.info/sct",
+							"code": "33894003",
+							"display": "Experimental Device"
+						}
+					]
+				},
+				"patient": {
+					"reference": "urn:uuid:0fc374a1-a226-4552-9683-55dd510e67c9"
+				},
+				"owner": {
+					"reference": "urn:uuid:17C7D86E-664F-4FE2-91D7-AF9A8E47311E"
+				}
+			},
+			"request": {
+				"method": "PUT",
+				"url": "Device?identifier=http://uwearme.com/dev|[YOUR_PATIENT_IDENTIFIER]"
+			}
+		},
+		{
+			"fullUrl": "urn:uuid:9b3055be-bb9f-4fce-b5da-599286eb2841",
+			"resource": {
+				"resourceType": "Observation",
+				"text": {
+					"status": "generated",
+					"div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"> UW Measure for Pat # [YOUR_PATIENT_IDENTIFIER] [DESCRIPTION_RESP_RATE]:[VALUE_RESP_RATE][UNIT_RESP_RATE] on [MEASURE_DATE] </div>"
+				},
+				"identifier": [
+					{
+						"system": "http://uwearme.com/measures",
+						"value": "[YOUR_PATIENT_IDENTIFIER]-[MEASURE_DATE]-[LOINC_CODE_RESP_RATE]"
+					}
+				],
+				"status": "final",
+				"code": {
+					"coding": [
+						{
+							"system": "http://loinc.org",
+							"code": "[LOINC_CODE_RESP_RATE]",
+							"display": "[DESCRIPTION_RESP_RATE]"
+						}
+					]
+				},
+				"subject": {
+					"reference": "urn:uuid:0fc374a1-a226-4552-9683-55dd510e67c9"
+				},
+				"effectiveDateTime": "[MEASURE_DATE]",
+				"valueQuantity": {
+					"value": [VALUE_RESP_RATE],
+					"unit": "[UNIT_RESP_RATE]"
+				},
+				"device": {
+					"reference": "urn:uuid:b405c692-54ea-4d0d-afb1-8f91880a3f24"
+				}
+			},
+			"request": {
+				"method": "POST",
+				"url": "Observation"
+			}
+		},
+		{
+			"fullUrl": "urn:uuid:bf551c01-8aa5-4ace-99d4-ae03a5bc89e7",
+			"resource": {
+				"resourceType": "Observation",
+				"text": {
+					"status": "generated",
+					"div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"> UW Measure for Pat # [YOUR_PATIENT_IDENTIFIER] [DESCRIPTION_SYSTOLIC_BP]: [VALUE_SYSTOLIC_BP][UNIT_SYSTOLIC_BP] on [MEASURE_DATE] </div>"
+				},
+				"identifier": [
+					{
+						"system": "http://uwearme.com/measures",
+						"value": "[YOUR_PATIENT_IDENTIFIER]-[MEASURE_DATE]-[LOINC_CODE_SYSTOLIC_BP]"
+					}
+				],
+				"status": "final",
+				"code": {
+					"coding": [
+						{
+							"system": "http://loinc.org",
+							"code": "[LOINC_CODE_SYSTOLIC_BP]",
+							"display": "[DESCRIPTION_SYSTOLIC_BP]"
+						}
+					]
+				},
+				"subject": {
+					"reference": "urn:uuid:0fc374a1-a226-4552-9683-55dd510e67c9"
+				},
+				"effectiveDateTime": "[MEASURE_DATE]",
+				"valueQuantity": {
+                    "value": [VALUE_SYSTOLIC_BP],
+					"unit": "[UNIT_SYSTOLIC_BP]"
+				},
+				"device": {
+					"reference": "urn:uuid:b405c692-54ea-4d0d-afb1-8f91880a3f24"
+				}
+			},
+			"request": {
+				"method": "POST",
+				"url": "Observation"
+			}
+		},
+		{
+			"fullUrl": "urn:uuid:54e8f280-8f5c-4d63-a174-29a091ecb06a",
+			"resource": {
+				"resourceType": "Observation",
+				"text": {
+					"status": "generated",
+					"div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"> UW Measure for Pat # [YOUR_PATIENT_IDENTIFIER] [DESCRIPTION_DIASTOLIC_BP]:[VALUE_DIASTOLIC_BP][UNIT_DIASTOLIC_BP] on [MEASURE_DATE] </div>"
+				},
+				"identifier": [
+					{
+						"system": "http://uwearme.com/measures",
+						"value": "[YOUR_PATIENT_IDENTIFIER]-[MEASURE_DATE]-[LOINC_CODE_DIASTOLIC_BP]"
+					}
+				],
+				"status": "final",
+				"code": {
+					"coding": [
+						{
+							"system": "http://loinc.org",
+							"code": "[LOINC_CODE_DIASTOLIC_BP]",
+							"display": "[DESCRIPTION_DIASTOLIC_BP]"
+						}
+					]
+				},
+				"subject": {
+					"reference": "urn:uuid:0fc374a1-a226-4552-9683-55dd510e67c9"
+				},
+				"effectiveDateTime": "[MEASURE_DATE]",
+				"valueQuantity": {
+					"value": [VALUE_DIASTOLIC_BP],
+					"unit": "[UNIT_DIASTOLIC_BP]"
+				},
+				"device": {
+					"reference": "urn:uuid:b405c692-54ea-4d0d-afb1-8f91880a3f24"
+				}
+			},
+			"request": {
+				"method": "POST",
+				"url": "Observation"
+			}
+		},
+		{
+			"fullUrl": "urn:uuid:55c0f3ad-4a2e-4516-8e2c-3db15ed62941",
+			"resource": {
+				"resourceType": "Observation",
+				"text": {
+					"status": "generated",
+					"div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"> UW Measure for Pat #[YOUR_PATIENT_IDENTIFIER] [DESCRIPTION_HEART_RATE]:                        [VALUE_HEART_RATE][UNIT_HEART_RATE] on [MEASURE_DATE] </div>"
+				},
+				"identifier": [
+					{
+						"system": "http://uwearme.com/measures",
+						"value": "[YOUR_PATIENT_IDENTIFIER]-[MEASURE_DATE]-[LOINC_CODE_HEART_RATE]"
+					}
+				],
+				"status": "final",
+				"code": {
+					"coding": [
+						{
+							"system": "http://loinc.org",
+							"code": "[LOINC_CODE_HEART_RATE]",
+							"display": "[DESCRIPTION_HEART_RATE]"
+						}
+					]
+				},
+				"subject": {
+					"reference": "urn:uuid:0fc374a1-a226-4552-9683-55dd510e67c9"
+				},
+				"effectiveDateTime": "[MEASURE_DATE]",
+				"valueQuantity": {
+					"value": [VALUE_HEART_RATE],
+					"unit": "[UNIT_HEART_RATE]"
+				},
+				"device": {
+					"reference": "urn:uuid:b405c692-54ea-4d0d-afb1-8f91880a3f24"
+				}
+			},
+			"request": {
+				"method": "POST",
+				"url": "Observation"
+			}
+		}
+	]
+}
