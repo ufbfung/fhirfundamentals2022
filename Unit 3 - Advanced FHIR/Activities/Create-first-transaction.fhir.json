@@ -118,12 +118,12 @@
 				"resourceType": "Observation",
 				"text": {
 					"status": "generated",
-					"div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"> UW Measure for Pat # brian.fung Respiratory Rate:16/min on 20210203T10:30:00Z </div>"
+					"div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"> UW Measure for Pat # brian.fung Respiratory Rate:16/min on 2021-02-03T10:30:00Z </div>"
 				},
 				"identifier": [
 					{
 						"system": "http://uwearme.com/measures",
-						"value": "brian.fung-20210203T10:30:00Z-9279-1"
+						"value": "brian.fung-2021-02-03T10:30:00Z-9279-1"
 					}
 				],
 				"status": "final",
@@ -139,7 +139,7 @@
 				"subject": {
 					"reference": "urn:uuid:0fc374a1-a226-4552-9683-55dd510e67c9"
 				},
-				"effectiveDateTime": "20210203T10:30:00Z",
+				"effectiveDateTime": "2021-02-03T10:30:00Z",
 				"valueQuantity": {
 					"value": 16,
 					"unit": "/min"
@@ -159,12 +159,12 @@
 				"resourceType": "Observation",
 				"text": {
 					"status": "generated",
-					"div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"> UW Measure for Pat # brian.fung Systolic Blood Pressure: 120mmHg on 20210203T10:30:00Z </div>"
+					"div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"> UW Measure for Pat # brian.fung Systolic Blood Pressure: 120mmHg on 2021-02-03T10:30:00Z </div>"
 				},
 				"identifier": [
 					{
 						"system": "http://uwearme.com/measures",
-						"value": "brian.fung-20210203T10:30:00Z-8480-6"
+						"value": "brian.fung-2021-02-03T10:30:00Z-8480-6"
 					}
 				],
 				"status": "final",
@@ -180,7 +180,7 @@
 				"subject": {
 					"reference": "urn:uuid:0fc374a1-a226-4552-9683-55dd510e67c9"
 				},
-				"effectiveDateTime": "20210203T10:30:00Z",
+				"effectiveDateTime": "2021-02-03T10:30:00Z",
 				"valueQuantity": {
                     "value": 120,
 					"unit": "mmHg"
@@ -200,12 +200,12 @@
 				"resourceType": "Observation",
 				"text": {
 					"status": "generated",
-					"div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"> UW Measure for Pat # brian.fung Diastolic Blood Pressure:80mmHg on 20210203T10:30:00Z </div>"
+					"div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"> UW Measure for Pat # brian.fung Diastolic Blood Pressure:80mmHg on 2021-02-03T10:30:00Z </div>"
 				},
 				"identifier": [
 					{
 						"system": "http://uwearme.com/measures",
-						"value": "brian.fung-20210203T10:30:00Z-8462-4"
+						"value": "brian.fung-2021-02-03T10:30:00Z-8462-4"
 					}
 				],
 				"status": "final",
@@ -221,7 +221,7 @@
 				"subject": {
 					"reference": "urn:uuid:0fc374a1-a226-4552-9683-55dd510e67c9"
 				},
-				"effectiveDateTime": "20210203T10:30:00Z",
+				"effectiveDateTime": "2021-02-03T10:30:00Z",
 				"valueQuantity": {
 					"value": 80,
 					"unit": "mmHg"
@@ -241,12 +241,12 @@
 				"resourceType": "Observation",
 				"text": {
 					"status": "generated",
-					"div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"> UW Measure for Pat #brian.fung Heart Rate:60/min on 20210203T10:30:00Z </div>"
+					"div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"> UW Measure for Pat #brian.fung Heart Rate:60/min on 2021-02-03T10:30:00Z </div>"
 				},
 				"identifier": [
 					{
 						"system": "http://uwearme.com/measures",
-						"value": "brian.fung-20210203T10:30:00Z-8867-4"
+						"value": "brian.fung-2021-02-03T10:30:00Z-8867-4"
 					}
 				],
 				"status": "final",
@@ -262,7 +262,7 @@
 				"subject": {
 					"reference": "urn:uuid:0fc374a1-a226-4552-9683-55dd510e67c9"
 				},
-				"effectiveDateTime": "20210203T10:30:00Z",
+				"effectiveDateTime": "2021-02-03T10:30:00Z",
 				"valueQuantity": {
 					"value": 60,
 					"unit": "/min"
