@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+    Automatic Scale Connection to any EHR through FHIR Based on the Vital Signs Profile 
+    https://www.hl7.org/fhir/observation-vitalsigns.html
+    Transmits Patient's weight, height and BMI through a FHIR single transaction
+ -->
+<Bundle xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns="http://hl7.org/fhir">
+
+    <type value="transaction"> </type>
+    <!-- First Entry Organization responsible for the device -->
+    <entry>
+        <fullUrl value="urn:uuid:03b5dbfe-6926-4e51-b3fd-73b2f63d694f"/>
+        <resource>
+
+            <Organization>
+                <text>
+                    <status value="generated"/>
+                    <div xmlns="http://www.w3.org/1999/xhtml"> 
+                        MY HOSPITAL GROUP </div>
+                </text>
+                <identifier>
+                    <system value="www.nationalorgidentifier.gov/ids"/>
+                    <value value="MYHOSPGRP"/>
+                </identifier>
+                <name value="MY HOSPITAL GROUP"/>
+                <address>
+                    <line value="2000 WEIGHABLE DRIVE"/>
+                    <city value="ANN ARBOR"/>
+                    <state value="MI"/>
+                    <country value="US"/>
+              </address>
+            </Organization>
+        </resource>
+        
+        <request>
+            <method value="PUT"/>
+            <url value="Organization?identifier=www.nationalorgidentifier.gov/ids|MYHOSPGRP"/>
+        </request>
+    </entry>
+    <!-- Second Entry : Patient using the  device -->
+    
+    <entry>
+        <fullUrl value="urn:uuid:01ba878a-e49d-4bac-b629-9de3fcb7e83a"></fullUrl>
+        <resource>
+            <Patient>
+                <text>
+                    <status value="generated"/>
+                    <div xmlns="http://www.w3.org/1999/xhtml"> Sample Patient Id # 99999999 </div>
+
+                </text>
+                <identifier>
+                    <system value="www.mypatientidentifier.com/ids"/>
+                    <value value="99999999"/>
+                </identifier>
+                <name>
+                    <family value="Sample"/>
+                    <given value="Patient"/>
+                </name>
+                <address>
+                    <line value="108 Weight Avenue"/>
+                    <city value="Ann Arbor"/>
+                    <state value="MI"/>
+                    <country value="USA"/>
+                </address>
+                <managingOrganization>
+                    <reference value="urn:uuid:03b5dbfe-6926-4e51-b3fd-73b2f63d694f"/>
+                </managingOrganization>
+            </Patient>
+
+        </resource>
+        <request>
+            <method value="PUT"/>
+            <url value="Patient?identifier=www.mypatientidentifier.com/ids|99999999"/>
+        </request>
+    </entry>
+    <!-- Third Entry Information of the device itself, including its UDI -->
+    
+    <entry>
+        <fullUrl value="urn:uuid:b6e1d2b1-ff09-46cf-a5d5-ae8cb17e7a0e"></fullUrl>
+        <resource>
+            <Device>
+
+             
+                <text>
+                    <status value="generated"/>
+                    <div xmlns="http://www.w3.org/1999/xhtml"> UW Device {01}09504000059118{17}141120{10}7654321D{21}10987654d321</div>
+                </text>
+
+                <identifier>
+                    <system value="www.uweighmme.com/dev"/>
+                    <value value="{01}09504000059118{17}141120{10}7654321D{21}10987654d321"/>
+
+                </identifier>
+                <type>
+                    <coding>
+                        <system value=" http://snomed.info/sct"/>
+                        <code value="5042005"/>
+                        <display value="Patient Scale"/>
+                    </coding>
+                </type>
+
+                <patient>
+                    <reference value="urn:uuid:01ba878a-e49d-4bac-b629-9de3fcb7e83a"> </reference>
+                </patient>
+
+                <owner>
+                    <reference value="urn:uuid:03b5dbfe-6926-4e51-b3fd-73b2f63d694f"
+                    > </reference>
+                </owner>
+
+            </Device>
+
+
+        </resource>
+        <request>
+            <method value="PUT"/>
+            <url value="Device?identifier={01}09504000059118{17}141120{10}7654321D{21}10987654d321"/>
+        </request>
+
+    </entry>
+  
+    <!--  First Observation: Weight -->
+
+    <entry>
+        <resource>
+            <Observation>
+
+                <text>
+                    <status value="generated"/>
+                    <div xmlns="http://www.w3.org/1999/xhtml"> 
+                        UW Device for Pat # 99999999 : Sample Patient 
+                        Weight: 108 kg (238 pounds) on 2019-12-01T10:45:00Z 
+                    </div>
+                </text>
+                <identifier>
+                    <system value="www.uweighme.com/measures"/>
+                    <value value="99999999-2019-12-01T10:45:00Z-8480-6"/>
+
+                </identifier>
+                <status value="final"/>
+                <code>
+                    <coding>
+                        <system value="http://loinc.org"/>
+                        <code value="29463-7"/>
+                        <display value="Body Weight"/>
+                    </coding>
+                </code>
+                <subject>
+                    <reference value="urn:uuid:01ba878a-e49d-4bac-b629-9de3fcb7e83a"> </reference>
+
+                </subject>
+                <effectiveDateTime value="2019-12-01T10:45:00Z"/>
+
+                <valueQuantity>
+                    <value value="108"/>
+                    <unit value="kg"/>
+                    <system value="http://unitsofmeasure.org"></system>
+                    
+                </valueQuantity>
+
+                <device>
+                    <reference value="urn:uuid:b6e1d2b1-ff09-46cf-a5d5-ae8cb17e7a0e"> </reference>
+                </device>
+
+            </Observation>
+
+        </resource>
+        <request>
+            <method value="POST"/>
+            <url value="Observation"/>
+        </request>
+        
+    </entry>
+    
+    
+    <!--  Second Observation: Height -->
+    
+    <entry>
+        <resource>
+            <Observation>
+                
+                <text>
+                    <status value="generated"/>
+                    <div xmlns="http://www.w3.org/1999/xhtml"> 
+                        UW Device for Pat # 99999999 : Sample Patient 
+                        Height: 170 cm (66.9 in) on 2019-12-01T10:45:00Z 
+                    </div>
+                </text>
+                <identifier>
+                    <system value="www.uweighme.com/measures"/>
+                    <value value="99999999-2019-12-01T10:45:00Z-8302-2"/>
+                    
+                </identifier>
+                <status value="final"/>
+                <code>
+                    <coding>
+                        <system value="http://loinc.org"/>
+                        <code value="8302-2"/>
+                        <display value="Body Height"/>
+                    </coding>
+                </code>
+                <subject>
+                    <reference value="urn:uuid:01ba878a-e49d-4bac-b629-9de3fcb7e83a"> </reference>
+                    
+                </subject>
+                <effectiveDateTime value="2019-12-01T10:45:00Z"/>
+                
+                <valueQuantity>
+                    <value value="170"/>
+                    <unit value="cm"/>
+                    <system value="http://unitsofmeasure.org"></system>
+                    
+                </valueQuantity>
+                
+                <device>
+                    <reference value="urn:uuid:b6e1d2b1-ff09-46cf-a5d5-ae8cb17e7a0e"> </reference>
+                </device>
+                
+            </Observation>
+            
+        </resource>
+        <request>
+            <method value="POST"/>
+            <url value="Observation"/>
+        </request>
+        
+    </entry>
+    
+    
+    <!--  Third Observation: BMI -->
+    
+    <entry>
+        <resource>
+            <Observation>
+                
+                <text>
+                    <status value="generated"/>
+                    <div xmlns="http://www.w3.org/1999/xhtml"> 
+                        UW Device for Pat # 99999999 : Sample Patient 
+                        BMI: 37.4  (Obese) on 2019-12-01T10:45:00Z 
+                    </div>
+                </text>
+                <identifier>
+                    <system value="www.uweighme.com/measures"/>
+                    <value value="99999999-2019-12-01T10:45:00Z-39156-5"/>
+                    
+                </identifier>
+                <status value="final"/>
+                <code>
+                    <coding>
+                        <system value="http://loinc.org"/>
+                        <code value="39156-5"/>
+                        <display value="Body Mass Index (BMI)"/>
+                    </coding>
+                </code>
+                <subject>
+                    <reference value="urn:uuid:01ba878a-e49d-4bac-b629-9de3fcb7e83a"> </reference>
+                    
+                </subject>
+                <effectiveDateTime value="2019-12-01T10:45:00Z"/>
+                
+                <valueQuantity>
+                    <value value="37.4"/>
+                    <unit value="kg/m2"/>
+                    <system value="http://unitsofmeasure.org"></system>
+                    
+                </valueQuantity>
+                
+                <interpretation>
+                    <text value="Obese"></text>
+                </interpretation>
+                
+                <device>
+                    <reference value="urn:uuid:b6e1d2b1-ff09-46cf-a5d5-ae8cb17e7a0e"> </reference>
+                </device>
+                
+            </Observation>
+            
+        </resource>
+        <request>
+            <method value="POST"/>
+            <url value="Observation"/>
+        </request>
+        
+    </entry>
+    
+</Bundle>
