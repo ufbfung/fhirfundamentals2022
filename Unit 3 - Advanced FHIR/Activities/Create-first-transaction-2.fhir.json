@@ -3,7 +3,7 @@
 	"type": "transaction",
 	"entry": [
 		{
-			"fullUrl": "urn:uuid:17C7D86E-664F-4FE2-91D7-AF9A8E47311E",
+			"fullUrl": "http://fhirserver.hl7fundamentals.org/fhir/Organization/3965",
 			"resource": {
 				"resourceType": "Organization",
 				"text": {
@@ -34,7 +34,7 @@
 			}
 		},
 		{
-			"fullUrl": "urn:uuid:0fc374a1-a226-4552-9683-55dd510e67c9",
+			"fullUrl": "http://fhirserver.hl7fundamentals.org/fhir/Patient/2571",
 			"resource": {
 				"resourceType": "Patient",
 				"text": {
@@ -66,7 +66,7 @@
 					}
 				],
 				"managingOrganization": {
-					"reference": "urn:uuid:17C7D86E-664F-4FE2-91D7-AF9A8E47311E"
+					"reference": "http://fhirserver.hl7fundamentals.org/fhir/Organization/3965"
 				}
 			},
 			"request": {
@@ -101,10 +101,10 @@
 					]
 				},
 				"patient": {
-					"reference": "urn:uuid:0fc374a1-a226-4552-9683-55dd510e67c9"
+					"reference": "http://fhirserver.hl7fundamentals.org/fhir/Patient/2571"
 				},
 				"owner": {
-					"reference": "urn:uuid:17C7D86E-664F-4FE2-91D7-AF9A8E47311E"
+					"reference": "http://fhirserver.hl7fundamentals.org/fhir/Organization/3965"
 				}
 			},
 			"request": {
@@ -137,7 +137,7 @@
 					]
 				},
 				"subject": {
-					"reference": "urn:uuid:0fc374a1-a226-4552-9683-55dd510e67c9"
+					"reference": "http://fhirserver.hl7fundamentals.org/fhir/Patient/2571"
 				},
 				"effectiveDateTime": "2021-02-03T10:45:00Z",
 				"valueQuantity": {
@@ -178,7 +178,7 @@
 					]
 				},
 				"subject": {
-					"reference": "urn:uuid:0fc374a1-a226-4552-9683-55dd510e67c9"
+					"reference": "http://fhirserver.hl7fundamentals.org/fhir/Patient/2571"
 				},
 				"effectiveDateTime": "2021-02-03T10:45:00Z",
 				"valueQuantity": {
@@ -219,7 +219,7 @@
 					]
 				},
 				"subject": {
-					"reference": "urn:uuid:0fc374a1-a226-4552-9683-55dd510e67c9"
+					"reference": "http://fhirserver.hl7fundamentals.org/fhir/Patient/2571"
 				},
 				"effectiveDateTime": "2021-02-03T10:45:00Z",
 				"valueQuantity": {
@@ -260,7 +260,7 @@
 					]
 				},
 				"subject": {
-					"reference": "urn:uuid:0fc374a1-a226-4552-9683-55dd510e67c9"
+					"reference": "http://fhirserver.hl7fundamentals.org/fhir/Patient/2571"
 				},
 				"effectiveDateTime": "2021-02-03T10:45:00Z",
 				"valueQuantity": {
