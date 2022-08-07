@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValueSet xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xmlns="http://hl7.org/fhir">
+  <text>
+    <status value="generated"/>
+    <div xmlns="http://www.w3.org/1999/xhtml"> 
+      <p>Value set "PPH Table" Berzerkistan PPH Patient Tax Situation</p> 
+      <table class="grid"> 
+        <tr> 
+          <td>U</td> 
+          <td>UNCOVERED</td> 
+          <td>PATIENT PAYS 21%</td> </tr> 
+        <tr> 
+          <td>V</td> 
+          <td>VOLUNTARY</td> 
+          <td>PATIENT PAYS 10.5%</td> </tr> 
+        <tr> 
+          <td>M</td> 
+          <td>MANDATED</td> 
+          <td>PATIENT PAYS 0%</td> </tr> 
+      </table>
+      </div>
+  </text>
+  <url value="http://fhir.hl7fundamentals.org/berzerkistan/ValueSet/PatientTaxSituation"/>
+  <identifier>
+    <system value="http://fhir.hl7fundamentals.org/berzerkistan/identifiers/valuesets"/>
+    <value value="PatientTaxSituation"/>
+  </identifier>
+  <version value="20151120"/>
+  <name value="Berzerkistan PPH Tax Situation - 20151120"/>
+  <status value="draft"/>
+  <experimental value="true"/>
+  <publisher value="Berzerkistan Healthcare Ministry"/>
+  <contact>
+    <name value="Professor Allan Karim Von Mannenheim"/>
+    <telecom>
+      <system value="other"/>
+      <value value="http://bhm.org.bz/fhir"/>
+    </telecom>
+  </contact>
+  <description value="Berzerkistan PPH Tax Situation - 20151120"/>
+  <extensible value="false"></extensible>  
+  <compose>
+    <include> 
+      <system value="http://fhir.hl7fundamentals.org/berzerkistan/CodeSystem/PatientTaxSituation"/> 
+      <concept>
+        <code value="U"></code>
+        <display value="UNCOVERED"></display>
+      </concept>
+      <concept>
+        <code value="M"></code>
+        <display value="MANDATED"></display>
+      </concept>
+      <concept>
+        <code value="V">
+        </code>
+        <display value="VOLUNTARY"></display>
+      </concept>
+    </include> 
+  </compose>
+</ValueSet>
