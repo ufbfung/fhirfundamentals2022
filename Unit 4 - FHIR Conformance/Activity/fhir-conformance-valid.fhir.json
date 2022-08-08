@@ -1,8 +1,14 @@
 {
     "resourceType": "Patient",
+    "id": "5139",
+    "meta": {
+        "versionId": "1",
+        "lastUpdated": "2022-08-08T00:51:15.285+00:00",
+        "source": "#bSoAx8tMyoL3eihp"
+    },
     "text": {
         "status": "generated",
-        "div": "div xmlns=\"http://www.w3.org/1999/xhtml\">Gender:male and birthDate: 1980-01-01</div>"
+        "div": "Gender:male and birthDate: 1980-01-01"
     },
     "gender": "male",
     "birthDate": "1980-01-01",
@@ -27,14 +33,14 @@
     "extension": [
         {
             "url": "https://simplifier.net/MAIS-SOPORTEAFACTURA/PPHTaxSituation/~xml",
-            "valueCode": "https://simplifier.net/ui/Publication/Show?projectkey=MAIS-SOPORTEAFACTURA&pubUrlKey=PatientTaxSituation"
+            "valueCode": "M"
         }
     ],
     "telecom": [
         {
             "system": "phone",
-            "value": "+5411 411-582-1747"
+            "value": "+54114115821747",
+            "use": "home"
         }
     ]
-
 }
