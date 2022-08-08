@@ -1,0 +1,40 @@
+{
+    "resourceType": "Patient",
+    "text": {
+        "status": "generated",
+        "div": "div xmlns=\"http://www.w3.org/1999/xhtml\">Gender:male and birthDate: 1980-01-01</div>"
+    },
+    "gender": "male",
+    "birthDate": "1980-01-01",
+    "name": [
+        {
+            "given": [
+                "Brian"
+            ],
+            "family": "Fung"
+        }
+    ],
+    "identifier": [
+        {
+            "system": "http://www.berzerkistan.gov/bni",
+            "value": "brian.fung"
+        },
+        {
+            "system": "http://www.berzerkistan.gov/nhib",
+            "value": "brian.fung"
+        }
+    ],
+    "extension": [
+        {
+            "url": "https://simplifier.net/MAIS-SOPORTEAFACTURA/PPHTaxSituation/~xml",
+            "valueCode": "https://simplifier.net/ui/Publication/Show?projectkey=MAIS-SOPORTEAFACTURA&pubUrlKey=PatientTaxSituation"
+        }
+    ],
+    "telecom": [
+        {
+            "system": "phone",
+            "value": "+5411 411-582-1747"
+        }
+    ]
+
+}
