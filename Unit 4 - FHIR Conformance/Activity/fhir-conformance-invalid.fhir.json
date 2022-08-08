@@ -1,0 +1,46 @@
+{
+    "resourceType": "Patient",
+    "id": "5139",
+    "meta": {
+        "versionId": "1",
+        "lastUpdated": "2022-08-08T00:51:15.285+00:00",
+        "source": "#bSoAx8tMyoL3eihp"
+    },
+    "text": {
+        "status": "generated",
+        "div": "Gender:male and birthDate: 1980-01-01"
+    },
+    "gender": "male",
+    "birthDate": "1980-01-01",
+    "name": [
+        {
+            "given": [
+                "Brian"
+            ],
+            "family": "Fung"
+        }
+    ],
+    "identifier": [
+        {
+            "system": "http://www.berzerkistan.gov/bni",
+            "value": "brian.fung"
+        },
+        {
+            "system": "http://clinfhir.com/fhir/NamingSystem/identifier",
+            "value": "brian.fung"
+        }
+    ],
+    "extension": [
+        {
+            "url": "https://simplifier.net/MAIS-SOPORTEAFACTURA/PPHTaxSituation/~xml",
+            "valueCode": "OTHER"
+        }
+    ],
+    "telecom": [
+        {
+            "system": "phone",
+            "value": "+54114115821747",
+            "use": "home"
+        }
+    ]
+}
