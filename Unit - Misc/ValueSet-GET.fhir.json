@@ -1,0 +1,36 @@
+{
+    "resourceType": "ValueSet",
+    "id": "6951981",
+    "meta": {
+        "versionId": "1",
+        "lastUpdated": "2022-08-16T00:56:48.520+00:00",
+        "source": "#MvIA7yzvxFuuNzU2"
+    },
+    "url": "www.hl7.org",
+    "identifier": [
+        {
+            "system": "www.hl7.org",
+            "value": "87369971"
+        }
+    ],
+    "name": "beta blockers",
+    "status": "active",
+    "description": "used for testing valuesets",
+    "compose": {
+        "include": [
+            {
+                "system": "www.loinc.org",
+                "concept": [
+                    {
+                        "code": "57",
+                        "display": "dementia"
+                    },
+                    {
+                        "code": "84",
+                        "display": "dementia type 2"
+                    }
+                ]
+            }
+        ]
+    }
+}

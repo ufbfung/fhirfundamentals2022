@@ -1,0 +1,31 @@
+{
+    "$schema":"https://raw.githubusercontent.com/ufbfung/fhirfundamentals2022/main/Schemas/fhir.schema.json",
+    "resourceType": "ValueSet",
+    "url": "www.hl7.org",
+    "identifier": [
+        {
+            "system": "www.hl7.org",
+            "value": "0011"            
+        }
+    ],
+    "name": "beta blockers",
+    "status": "active",
+    "description": "used for testing valuesets",
+    "compose": {
+        "include": [
+            {
+                "system": "www.loinc.org",
+                "concept": [
+                    {
+                        "code": "57",
+                        "display": "dementia"
+                    },
+                    {
+                        "code": "84",
+                        "display": "dementia type 2"
+                    }
+                ]
+            }
+        ]
+    }
+}
